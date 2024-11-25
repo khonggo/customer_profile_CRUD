@@ -12,14 +12,21 @@ app.use(cors({
     origin: 'http://localhost:3000',
 }));
 // Create a connection to the MySQL database
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',  
-    password: '', 
-    database: 'customer',
-    port: 3306,  
-});
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',  
+//     password: '', 
+//     database: 'customer',
+//     port: 3306,  
+// });
 
+const db = mysql.createConnection({
+    host: 'mysql-1e3e5ecc-khonggo-1c2b.b.aivencloud.com',
+    user: 'avnadmin',  
+    password: 'AVNS_3y1ddLS-w9AdmQtS7m5', 
+    database: 'customer',
+    port: 21079,  
+});
 // Connect to MySQL
 db.connect((err) => {
     if (err) {
