@@ -80,6 +80,7 @@ const CustomerForm = ({ editingCustomer, onActionComplete }) => {
       setAddress("");
 
       onActionComplete();
+      window.location.reload();
     } catch (err) {
       console.error("Error during submission:", err);
       setError("An error occurred while submitting the form.");
